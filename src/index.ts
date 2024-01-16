@@ -5,6 +5,7 @@ import { logger } from 'hono/logger'
 import { prettyJSON } from 'hono/pretty-json'
 
 import connectDB from './configs/db'
+import { ENV } from './configs/env'
 import { errorHandler, notFound } from './middlewares/errorMiddlewares'
 import mainRoute from './routes'
 
@@ -58,6 +59,6 @@ app.notFound((c) => {
 })
 
 export default {
-	port: 3000,
+	port: ENV.PORT,
 	fetch: app.fetch
 }

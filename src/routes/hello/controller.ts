@@ -2,7 +2,17 @@ import { OpenAPIHono } from '@hono/zod-openapi'
 import { jwt } from 'hono/jwt'
 import { testRoute } from './route'
 
-const hello = new OpenAPIHono()
+type Bindings = {
+	TOKEN: string
+}
+
+type Variables = {
+	jwtPayload: {
+		id: string
+	}
+}
+
+const hello = new OpenAPIHono<{ Bindings: Bindings; Variables: Variables }>()
 hello.use(
 	'*',
 	jwt({
@@ -12,7 +22,7 @@ hello.use(
 hello.openapi(testRoute, (c) => {
 	const { id } = c.req.valid('param')
 	console.log('🚀 ~ hello.openapi ~ id:', id)
-	const payload = c.get('jwtPayload')
+	const payload = c.get('jwtPayload') as { id: string }
 	console.log('🚀 ~ hello.openapi ~ payload:', payload)
 	return c.json({
 		id,
