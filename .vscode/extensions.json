@@ -1,0 +1,16 @@
+{
+	"recommendations": [
+		"alessandrobenassi.cloudflare-devtools",
+		"ivanarjona.cloudflaretunnel",
+		"oven.bun-vscode",
+		"github.copilot",
+		"github.copilot-chat",
+		"vue.volar",
+		"ms-azuretools.vscode-docker",
+		"beardedbear.beardedtheme",
+		"beardedbear.beardedicons",
+		"biomejs.biome-nightly",
+		"tamasfe.even-better-toml",
+		"chakrounanas.turbo-console-log"
+	]
+}
