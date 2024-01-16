@@ -47,6 +47,7 @@ app.get(
 )
 
 app.onError((err, c) => {
+	console.log('🚀 ~ app.onError ~ err:', err)
 	const error = errorHandler(c)
 	return error
 })

@@ -10,6 +10,7 @@
 		"beardedbear.beardedtheme",
 		"beardedbear.beardedicons",
 		"biomejs.biome-nightly",
-		"tamasfe.even-better-toml"
+		"tamasfe.even-better-toml",
+		"chakrounanas.turbo-console-log"
 	]
 }
