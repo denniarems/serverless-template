@@ -24,9 +24,9 @@ app.use(
 
 app.get('/', (c) => c.text('Welcome to the API!'))
 
-app.route('/', mainRoute)
+app.route('/api', mainRoute)
 
-app.doc31('/doc', {
+app.doc31('/docs', {
 	openapi: '3.1.0',
 	info: {
 		version: '1.0.0',
@@ -39,10 +39,10 @@ app.openAPIRegistry.registerComponent('securitySchemes', 'bearerAuth', {
 	scheme: 'bearer'
 })
 app.get(
-	'/api',
+	'/doc',
 	apiReference({
 		spec: {
-			url: '/doc'
+			url: '/docs'
 		}
 	})
 )
