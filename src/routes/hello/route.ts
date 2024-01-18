@@ -1,7 +1,7 @@
 import { createRoute } from '@hono/zod-openapi'
 import { ParamsSchema, UserSchema } from './schema'
 
-export const testRoute = createRoute({
+export const helloRoute = createRoute({
 	method: 'get',
 	path: '/users/{id}',
 	request: {
